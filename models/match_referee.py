@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from models.imports import *
 
 @dataclass
 class MatchReferee:

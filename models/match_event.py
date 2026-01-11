@@ -1,4 +1,4 @@
-from imports import *
+from models.imports import *
 
 MatchEventType = Literal['goal', 'own_goal', 'yellow', 'red']
 

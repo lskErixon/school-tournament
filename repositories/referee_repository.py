@@ -1,4 +1,7 @@
+from __future__ import annotations
+
 from typing import List
+
 from src.db_mysql import Db, NotFoundError
 from models.referee import Referee
 
@@ -18,20 +21,39 @@ class RefereeRepository:
             row = cur.fetchone()
             if not row:
                 raise NotFoundError(f"Referee {referee_id} not found")
+
+            row["active"] = bool(row["active"])
             return Referee(**row)
 
-    def list(self, only_active: bool = False) -> List[Referee]:
-        sql = """
-        SELECT referee_id, full_name, email, level, active
-        FROM referee
+    def list(self, active_only: bool = False) -> List[Referee]:
         """
-        if only_active:
-            sql += " WHERE active=1"
-        sql += " ORDER BY full_name"
+        Returns list of referees.
+        If active_only=True, only active referees are returned.
+        """
+        if active_only:
+            sql = """
+            SELECT referee_id, full_name, email, level, active
+            FROM referee
+            WHERE active=1
+            ORDER BY full_name
+            """
+            params = ()
+        else:
+            sql = """
+            SELECT referee_id, full_name, email, level, active
+            FROM referee
+            ORDER BY full_name
+            """
+            params = ()
 
         with self.db.conn() as cnx, self.db.cursor(cnx) as cur:
-            cur.execute(sql)
-            return [Referee(**r) for r in cur.fetchall()]
+            cur.execute(sql, params)
+            rows = cur.fetchall()
+
+            for r in rows:
+                r["active"] = bool(r["active"])
+
+            return [Referee(**r) for r in rows]
 
     def insert(self, r: Referee) -> int:
         sql = """
@@ -39,7 +61,10 @@ class RefereeRepository:
         VALUES (%s, %s, %s, %s)
         """
         with self.db.conn() as cnx, self.db.cursor(cnx) as cur:
-            cur.execute(sql, (r.full_name, r.email, r.level, int(r.active)))
+            cur.execute(
+                sql,
+                (r.full_name, r.email, r.level, int(r.active)),
+            )
             cnx.commit()
             return int(cur.lastrowid)
 
@@ -49,11 +74,17 @@ class RefereeRepository:
 
         sql = """
         UPDATE referee
-        SET full_name=%s, email=%s, level=%s, active=%s
+        SET full_name=%s,
+            email=%s,
+            level=%s,
+            active=%s
         WHERE referee_id=%s
         """
         with self.db.conn() as cnx, self.db.cursor(cnx) as cur:
-            cur.execute(sql, (r.full_name, r.email, r.level, int(r.active), r.referee_id))
+            cur.execute(
+                sql,
+                (r.full_name, r.email, r.level, int(r.active), r.referee_id),
+            )
             if cur.rowcount == 0:
                 raise NotFoundError(f"Referee {r.referee_id} not found")
             cnx.commit()

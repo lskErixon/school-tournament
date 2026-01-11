@@ -1,4 +1,4 @@
-from imports import *
+from models.imports import *
 
 @dataclass
 class Tournament:

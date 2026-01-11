@@ -1,4 +1,4 @@
-from imports import *
+from models.imports import *
 
 PlayerPosition = Literal['GK', 'DEF', 'MID', 'ATT']
 

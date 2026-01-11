@@ -2,6 +2,7 @@ import json
 import sys
 
 from db_mysql import Db, DbConfig, DbError
+from ui.app import App
 
 
 def load_config(path: str) -> DbConfig:
@@ -13,7 +14,7 @@ def load_config(path: str) -> DbConfig:
 
         return DbConfig(
             host=db["host"],
-            port=db["port"],
+            port=int(db["port"]),
             user=db["user"],
             password=db["password"],
             database=db["name"],
@@ -48,10 +49,12 @@ def main():
     try:
         test_connection(db)
         print("Connection successful")
-
     except DbError as e:
         print("Database error:", e)
-        sys.exit(1)
+        print("Application will still start (DB test available in GUI)")
+
+    app = App(db)
+    app.mainloop()
 
 
 if __name__ == "__main__":

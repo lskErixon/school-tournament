@@ -1,4 +1,4 @@
-from imports import *
+from models.imports import *
 
 MatchStatus = Literal['scheduled', 'live', 'finished', 'cancelled']
 

@@ -17,7 +17,6 @@ from repositories.referee_repository import RefereeRepository
 
 STATUSES = ("scheduled", "live", "finished", "cancelled")
 
-
 class MatchCreateDialog(tk.Toplevel):
     def __init__(self, parent, title: str, tournaments: list[Tournament], teams: list[Team], referees: list[Referee]):
         super().__init__(parent)
@@ -231,7 +230,6 @@ class MatchesScreen(ttk.Frame):
     def load_data(self):
         try:
             self._clear()
-            # očekáváme, že repo vrací "view model" / dicty nebo matchy; použijeme jednoduché dicty:
             rows = self.match_repo.list_with_names()
             for r in rows:
                 self.tree.insert(

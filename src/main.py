@@ -4,7 +4,6 @@ import sys
 from db_mysql import Db, DbConfig, DbError
 from ui.app import App
 
-
 def load_config(path: str) -> DbConfig:
     try:
         with open(path, "r", encoding="utf-8") as f:

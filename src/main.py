@@ -20,15 +20,15 @@ def load_config(path: str) -> DbConfig:
         )
 
     except FileNotFoundError:
-        print("❌ Config file not found")
+        print("Config file not found")
         sys.exit(1)
 
     except KeyError as e:
-        print(f"❌ Missing config key: {e}")
+        print(f"Missing config key: {e}")
         sys.exit(1)
 
     except json.JSONDecodeError:
-        print("❌ Invalid JSON format in config")
+        print("Invalid JSON format in config")
         sys.exit(1)
 
 

@@ -50,4 +50,10 @@ def show_page(container: ttk.Frame, app, key: str, on_test_db):
         page.grid(row=0, column=0, sticky="nsew")
         return
 
+    if key == "Import":
+        from ui.screens.import_screen import ImportScreen
+        page = ImportScreen(container, app)
+        page.grid(row=0, column=0, sticky="nsew")
+        return
+
     show_placeholder(container, key)

@@ -20,6 +20,19 @@ class PlayerRepository:
                 raise NotFoundError(f"Player {player_id} not found")
             return Player(**row)
 
+    def list_all(self) -> List[Player]:
+        """
+        Returns all players (no team filter).
+        """
+        sql = """
+        SELECT player_id, team_id, first_name, last_name, birth_date, position
+        FROM player
+        ORDER BY last_name, first_name
+        """
+        with self.db.conn() as cnx, self.db.cursor(cnx) as cur:
+            cur.execute(sql)
+            return [Player(**r) for r in cur.fetchall()]
+
     def list_by_team(self, team_id: int) -> List[Player]:
         sql = """
         SELECT player_id, team_id, first_name, last_name, birth_date, position

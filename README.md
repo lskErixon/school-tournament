@@ -42,34 +42,36 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+---
+
 4. Database setup (MySQL Workbench)
 
-  1)You can use exists connection or create new(for new conn push "+" like on the screenshot) ->
+  4.1 You can use exists connection or create new(for new conn push "+" like on the screenshot) ->
   
   
   <img width="255" height="301" alt="image" src="https://github.com/user-attachments/assets/6a734c78-0133-44f8-99ac-56d70b3571de" />
   
   
-  2)Create database school_tuornament ->
-  4.1 New quary tab -> 
+  4.2Create database school_tuornament ->
+  4.3 New quary tab -> 
   
   
   <img width="893" height="526" alt="image" src="https://github.com/user-attachments/assets/0b724d06-9e84-4573-8a8a-5626a0699efd" />
   
   
-  4.2 Create schema school_tournament ->
+  4.4 Create schema school_tournament ->
   
   
   <img width="601" height="167" alt="image" src="https://github.com/user-attachments/assets/1748bf96-8678-4f0a-9897-72bc593cca37" />
   
   
-  4.3 Create tables (copy query from ["sql/create_tables.sql "](sql/create_tables.sql) and past into MySQL Workbench, execute it) ->
+  4.5 Create tables (copy query from ["sql/create_tables.sql "](sql/create_tables.sql) and past into MySQL Workbench, execute it) ->
   
 
   <img width="721" height="841" alt="image" src="https://github.com/user-attachments/assets/c172d191-8411-48ea-979b-8ebb9209039a" />
 
   
-  4.4 Create view (copy query from ["sql/create_tables.sql "](sql/create_view.sql) and past into MySQL Workbench, execute it) -> 
+  4.6 Create view (copy query from ["sql/create_tables.sql "](sql/create_view.sql) and past into MySQL Workbench, execute it) -> 
 
 
   <img width="930" height="817" alt="image" src="https://github.com/user-attachments/assets/6a2d090e-c046-4430-ab16-876e8fea2b81" />

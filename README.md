@@ -65,10 +65,9 @@ path: school-tournament/src/config.json
 
 5. Install dependencies using:
 
-`bash
-
+```bash
 pip install -r requirements.txt
-
+```
 
 Running the Application
 
@@ -84,17 +83,11 @@ test database connection
 open the Tkinter GUI window
 
 ## Recommended Usage Order (First Run)
-
 Tournaments – create at least one tournament
-
 Teams – create teams
-
 Players – add players or import CSV
-
 Referees – create at least one active referee
-
 Matches – create matches (select teams + referees)
-
 Match Events – add goals/cards to matches
    
 ## Project Goals
@@ -122,8 +115,6 @@ Match Events – add goals/cards to matches
 No ORM (SQLAlchemy, Django ORM, etc.) is used.
 
 ---
-
-## Project Structure
 
 ## Project Structure
 
@@ -185,8 +176,9 @@ mysql-connector-python==9.5.0
 ======
 Install dependencies using:
 
-`bash
+```bash
 pip install -r requirements.txt
+```
 
 Rules:
 
@@ -199,51 +191,31 @@ Column names must match exactly
 position ∈ GK, DEF, MID, ATT
 
 🔄 Transactions
-
 Adding a goal event is implemented as a database transaction
-
 Match status automatically changes from scheduled → live
-
 Rollback is performed on error
 
 🧪 Error Handling
-
 Invalid input validation (UI + repository)
-
 Database connection errors
-
 Foreign key constraint handling
-
 User-friendly error dialogs
 
 ✅ Assignment Requirements Fulfilled
-
 ✔ Real relational database (MySQL)
-
 ✔ 5+ tables with relations
-
 ✔ M:N relationship (match ↔ referee)
-
 ✔ Custom DAO / Repository pattern (D1)
-
 ✔ CRUD operations
-
 ✔ Transaction across multiple tables
-
 ✔ CSV import into multiple tables
-
 ✔ Configuration via config file
-
 ✔ GUI usable by non-technical users
-
 ✔ Error handling and validation
 
 📝 Notes
-
 This is a desktop application, not a web app
-
 No IDE is required to run the application
-
 The project was developed on a feature branch and merged into main
 
 (It was hard and long to make this project, but with interest, I hope it's not broken and there aren't too many bugs, if you encounter any problems, I apologize, ask the AI ​​what the problem is).

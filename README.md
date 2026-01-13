@@ -19,6 +19,7 @@ git clone <REPOSITORY_URL>
 └─ cd school-tournament (in pycharm open terminal and past the command).
 
 3. Create virtual environment (in pycharm open terminal and past the command).
+4. 
 Windows
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -65,6 +66,7 @@ path: school-tournament/src/config.json
 5. Install dependencies using:
 
 `bash
+
 pip install -r requirements.txt
 
 

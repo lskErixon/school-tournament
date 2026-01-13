@@ -25,6 +25,7 @@ cd school-tournament
 ### Windows (PowerShell)
 
 ```powershell
+### Windows (PowerShell)
 py -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install -r requirements.txt

@@ -9,14 +9,17 @@ This project was created as a **portfolio / school assignment** and fulfills all
 
 ## Installation & Setup
 1. Clone the repository (open pycharm atd..).
-2. 
-git clone <REPOSITORY_URL>
-│
+2. git clone <REPOSITORY_URL>
+
 
 <img width="412" height="345" alt="image" src="https://github.com/user-attachments/assets/b4b3462c-58ea-4b21-9045-112804b84e45" />
 
 
-└─ cd school-tournament (in pycharm open terminal and past the command).
+In pycharm open terminal and past the command
+
+```bash
+cd school-tournament
+```
 
 3. Create virtual environment (in pycharm open terminal and past the command).
 4. 
@@ -34,23 +37,31 @@ pip install -r requirements.txt
 
   1)You can use exists connection or create new(for new conn push "+" like on the screenshot) ->
   
+  
   <img width="255" height="301" alt="image" src="https://github.com/user-attachments/assets/6a734c78-0133-44f8-99ac-56d70b3571de" />
   
+  
   2)Create database school_tuornament ->
-  new quary tab -> 
+  1.1 New quary tab -> 
+  
   
   <img width="893" height="526" alt="image" src="https://github.com/user-attachments/assets/0b724d06-9e84-4573-8a8a-5626a0699efd" />
   
-  create schema school_tournament ->
+  
+  1.2 Create schema school_tournament ->
+  
   
   <img width="601" height="167" alt="image" src="https://github.com/user-attachments/assets/1748bf96-8678-4f0a-9897-72bc593cca37" />
   
-  create tables (copy query from ["sql/create_tables.sql "](sql/create_tables.sql) and past into MySQL Workbench, execute it) ->
+  
+  1.3 Create tables (copy query from ["sql/create_tables.sql "](sql/create_tables.sql) and past into MySQL Workbench, execute it) ->
+  
 
   <img width="721" height="841" alt="image" src="https://github.com/user-attachments/assets/c172d191-8411-48ea-979b-8ebb9209039a" />
 
   
-  create view (copy query from ["sql/create_tables.sql "](sql/create_view.sql) and past into MySQL Workbench, execute it) -> 
+  1.4 Create view (copy query from ["sql/create_tables.sql "](sql/create_view.sql) and past into MySQL Workbench, execute it) -> 
+
 
   <img width="930" height="817" alt="image" src="https://github.com/user-attachments/assets/6a2d090e-c046-4430-ab16-876e8fea2b81" />
 
@@ -58,16 +69,17 @@ pip install -r requirements.txt
 4. Application configuration
 change config.json fill your data
 path: school-tournament/src/config.json
-
+```json
 {
   "database": {
-    "host": "127.0.0.1",
+    "host": "localhost",
     "port": 3306,
-    "user": "example_user",
-    "password": "example_pass",
+    "user": "school_user",
+    "password": "your_password_here",
     "name": "school_tournament"
   }
 }
+```
 
 5. Install dependencies using:
 

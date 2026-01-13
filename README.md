@@ -45,9 +45,15 @@ pip install -r requirements.txt
   
   <img width="601" height="167" alt="image" src="https://github.com/user-attachments/assets/1748bf96-8678-4f0a-9897-72bc593cca37" />
   
-  create tables ->
+  create tables (copy query from [""](sql/create_tables.sql) and past into MySQL Workbench, execute it) ->
+
+  <img width="721" height="841" alt="image" src="https://github.com/user-attachments/assets/c172d191-8411-48ea-979b-8ebb9209039a" />
+
   
-  create view ->
+  create view (copy query from [""](sql/create_view.sql) and past into MySQL Workbench, execute it) -> 
+
+  <img width="930" height="817" alt="image" src="https://github.com/user-attachments/assets/6a2d090e-c046-4430-ab16-876e8fea2b81" />
+
   
 4. Application configuration
 change config.json fill your data

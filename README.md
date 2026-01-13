@@ -125,50 +125,47 @@ No ORM (SQLAlchemy, Django ORM, etc.) is used.
 
 ## Project Structure
 
+## Project Structure
+
+```text
 school-tournament/
-├─ .venv/                     # Python virtual environment (not committed)
-│
-├─ models/                    # Domain models (dataclasses)
-│  ├─ imports/
-│  │  └─ __init__.py          # Shared model imports
-│  ├─ match.py
-│  ├─ match_event.py
-│  ├─ match_referee.py
-│  ├─ player.py
-│  ├─ referee.py
-│  ├─ team.py
-│  └─ tournament.py
-│
-├─ repositories/              # DAO / Repository layer (D1)
-│  ├─ match_event_repository.py
-│  ├─ match_referee_repository.py
-│  ├─ match_repository.py
-│  ├─ player_repository.py
-│  ├─ referee_repository.py
-│  ├─ team_repository.py
-│  └─ tournament_repository.py
-│
-├─ services/                  # Business logic / services
-│  └─ import_service.py       # CSV import logic
-│
-├─ src/                       # Core application infrastructure
-│  ├─ config.json             # Local configuration (gitignored)
-│  ├─ db_mysql.py             # MySQL connection + helpers
-│  └─ main.py                 # Application entry point
-│
-├─ ui/                        # GUI layer (Tkinter)
-│  ├─ dialogs/                # Modal dialogs (create/edit)
-│  ├─ screens/                # Main application screens
-│  ├─ widgets/                # Reusable UI components
-│  ├─ app.py                  # Tkinter app bootstrap
-│  └─ router.py               # Screen navigation
-│
-├─ players_test.csv           # Sample CSV for player import
-├─ teams_test.csv             # Sample CSV for team import
-│
-├─ requirements.txt           # Python dependencies
-├─ .gitignore
-└─ README.md
+├── .venv/                   # Python virtual environment (not committed)
+├── models/                  # Domain models (dataclasses)
+│   ├── imports/
+│   │   └── __init__.py       # Shared model imports
+│   ├── match.py
+│   ├── match_event.py
+│   ├── match_referee.py
+│   ├── player.py
+│   ├── referee.py
+│   ├── team.py
+│   └── tournament.py
+├── repositories/            # DAO / Repository layer (D1)
+│   ├── match_event_repository.py
+│   ├── match_referee_repository.py
+│   ├── match_repository.py
+│   ├── player_repository.py
+│   ├── referee_repository.py
+│   ├── team_repository.py
+│   └── tournament_repository.py
+├── services/                # Business logic
+│   └── import_service.py    # CSV import logic
+├── src/                     # Core infrastructure
+│   ├── config.json          # Local configuration (gitignored)
+│   ├── db_mysql.py          # MySQL connection & helpers
+│   └── main.py              # Application entry point
+├── ui/                      # GUI layer (Tkinter)
+│   ├── dialogs/             # Modal dialogs
+│   ├── screens/             # Application screens
+│   ├── widgets/             # Reusable UI components
+│   ├── app.py               # Tkinter bootstrap
+│   └── router.py            # Screen navigation
+├── players_test.csv         # Sample CSV for player import
+├── teams_test.csv           # Sample CSV for team import
+├── requirements.txt         # Python dependencies
+├── .gitignore
+└── README.md
+```
 
 ---
 

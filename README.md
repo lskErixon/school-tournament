@@ -65,13 +65,13 @@ pip install -r requirements.txt
   <img width="601" height="167" alt="image" src="https://github.com/user-attachments/assets/1748bf96-8678-4f0a-9897-72bc593cca37" />
   
   
-  4.5 Create tables (copy query from ["sql/create_tables.sql "](sql/create_tables.sql) and past into MySQL Workbench, execute it) ->
+  4.5 Create tables (copy query from [sql/create_tables.sql](sql/create_tables.sql) and past into MySQL Workbench, execute it) ->
   
 
   <img width="721" height="841" alt="image" src="https://github.com/user-attachments/assets/c172d191-8411-48ea-979b-8ebb9209039a" />
 
   
-  4.6 Create view (copy query from ["sql/create_tables.sql "](sql/create_view.sql) and past into MySQL Workbench, execute it) -> 
+  4.6 Create view (copy query from [sql/create_tables.sql](sql/create_view.sql) and past into MySQL Workbench, execute it) -> 
 
 
   <img width="930" height="817" alt="image" src="https://github.com/user-attachments/assets/6a2d090e-c046-4430-ab16-876e8fea2b81" />
@@ -98,9 +98,9 @@ path: school-tournament/src/config.json
 pip install -r requirements.txt
 ```
 
-Running the Application
+## Running the Application
 
-Activate virtual environment and run:
+7. Activate virtual environment and run:
 
 command in terminal "python main.py" OR push the button in appication(example pycharm).
 
@@ -113,10 +113,15 @@ open the Tkinter GUI window
 
 ## Recommended Usage Order (First Run)
 Tournaments – create at least one tournament
-Teams – create teams
-Players – add players or import CSV
+
+Teams – create teams [use teams_test.csv](teams_test.csv)
+
+Players – add players or import CSV [use players_test.csv](players_test.csv)
+
 Referees – create at least one active referee
+
 Matches – create matches (select teams + referees)
+
 Match Events – add goals/cards to matches
    
 ## Project Goals

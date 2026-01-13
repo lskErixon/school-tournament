@@ -224,37 +224,37 @@ Comma , delimiter
 Column names must match exactly
 
 position ∈ GK, DEF, MID, ATT
----
 
-🔄 Transactions
-Adding a goal event is implemented as a database transaction
-Match status automatically changes from scheduled → live
-Rollback is performed on error
----
+## 🔄 Transactions
 
-🧪 Error Handling
-Invalid input validation (UI + repository)
-Database connection errors
-Foreign key constraint handling
-User-friendly error dialogs
----
+- Adding a goal event is implemented as a **database transaction**
+- Match status automatically changes from **`scheduled` → `live`**
+- **Rollback** is performed automatically on error to keep data consistent
 
-✅ Assignment Requirements Fulfilled
-✔ Real relational database (MySQL)
-✔ 5+ tables with relations
-✔ M:N relationship (match ↔ referee)
-✔ Custom DAO / Repository pattern (D1)
-✔ CRUD operations
-✔ Transaction across multiple tables
-✔ CSV import into multiple tables
-✔ Configuration via config file
-✔ GUI usable by non-technical users
-✔ Error handling and validation
----
+## 🧪 Error Handling
 
-📝 Notes
-This is a desktop application, not a web app
-No IDE is required to run the application
-The project was developed on a feature branch and merged into main
----
+- Invalid input validation on **UI level and repository level**
+- Database connection errors are handled gracefully
+- Foreign key constraint violations are detected and reported
+- User-friendly error dialogs are shown to the user
+
+## ✅ Assignment Requirements Fulfilled
+
+- ✔ Real relational database (**MySQL**)
+- ✔ 5+ tables with relations
+- ✔ M:N relationship (**match ↔ referee**)
+- ✔ Custom **DAO / Repository pattern (D1)**
+- ✔ Full CRUD operations
+- ✔ Transaction across multiple tables
+- ✔ CSV import into multiple tables
+- ✔ Configuration via config file (`config.json`)
+- ✔ GUI usable by non-technical users
+- ✔ Error handling and validation
+
+## 📝 Notes
+
+- This is a **desktop application**, not a web application
+- No IDE is required to run the application
+- The project was developed on a feature branch and later merged into `main`
+
 (It was hard and long to make this project, but with interest, I hope it's not broken and there aren't too many bugs, if you encounter any problems, I apologize, ask the AI ​​what the problem is).

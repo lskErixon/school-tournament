@@ -9,9 +9,13 @@ This project was created as a **portfolio / school assignment** and fulfills all
 
 ## Installation & Setup
 1. Clone the repository (open pycharm atd..).
+2. 
 git clone <REPOSITORY_URL>
 │
+
 <img width="412" height="345" alt="image" src="https://github.com/user-attachments/assets/b4b3462c-58ea-4b21-9045-112804b84e45" />
+
+
 └─ cd school-tournament (in pycharm open terminal and past the command).
 
 3. Create virtual environment (in pycharm open terminal and past the command).
@@ -28,12 +32,18 @@ pip install -r requirements.txt
 3. Database setup (MySQL Workbench)
 
   1)You can use exists connection or create new(for new conn push "+" like on the screenshot) ->
+  
   <img width="255" height="301" alt="image" src="https://github.com/user-attachments/assets/6a734c78-0133-44f8-99ac-56d70b3571de" />
+  
   2)Create database school_tuornament ->
   new quary tab -> 
+  
   <img width="893" height="526" alt="image" src="https://github.com/user-attachments/assets/0b724d06-9e84-4573-8a8a-5626a0699efd" />
+  
   create schema school_tournament ->
+  
   <img width="601" height="167" alt="image" src="https://github.com/user-attachments/assets/1748bf96-8678-4f0a-9897-72bc593cca37" />
+  
   create tables ->
   
   create view ->

@@ -22,18 +22,27 @@ cd school-tournament
 ```
 
 3. Create virtual environment (in pycharm open terminal and past the command).
-4. 
-Windows
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
+### Windows (PowerShell)
 
-macOS / Linux
+```powershell
+py -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+---
+
+### macOS / Linux
+
+```md
+### macOS / Linux
+
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
 
-3. Database setup (MySQL Workbench)
+4. Database setup (MySQL Workbench)
 
   1)You can use exists connection or create new(for new conn push "+" like on the screenshot) ->
   
@@ -42,31 +51,31 @@ pip install -r requirements.txt
   
   
   2)Create database school_tuornament ->
-  1.1 New quary tab -> 
+  4.1 New quary tab -> 
   
   
   <img width="893" height="526" alt="image" src="https://github.com/user-attachments/assets/0b724d06-9e84-4573-8a8a-5626a0699efd" />
   
   
-  1.2 Create schema school_tournament ->
+  4.2 Create schema school_tournament ->
   
   
   <img width="601" height="167" alt="image" src="https://github.com/user-attachments/assets/1748bf96-8678-4f0a-9897-72bc593cca37" />
   
   
-  1.3 Create tables (copy query from ["sql/create_tables.sql "](sql/create_tables.sql) and past into MySQL Workbench, execute it) ->
+  4.3 Create tables (copy query from ["sql/create_tables.sql "](sql/create_tables.sql) and past into MySQL Workbench, execute it) ->
   
 
   <img width="721" height="841" alt="image" src="https://github.com/user-attachments/assets/c172d191-8411-48ea-979b-8ebb9209039a" />
 
   
-  1.4 Create view (copy query from ["sql/create_tables.sql "](sql/create_view.sql) and past into MySQL Workbench, execute it) -> 
+  4.4 Create view (copy query from ["sql/create_tables.sql "](sql/create_view.sql) and past into MySQL Workbench, execute it) -> 
 
 
   <img width="930" height="817" alt="image" src="https://github.com/user-attachments/assets/6a2d090e-c046-4430-ab16-876e8fea2b81" />
 
   
-4. Application configuration
+5. Application configuration
 change config.json fill your data
 path: school-tournament/src/config.json
 ```json
@@ -81,7 +90,7 @@ path: school-tournament/src/config.json
 }
 ```
 
-5. Install dependencies using:
+6. Install dependencies using:
 
 ```bash
 pip install -r requirements.txt

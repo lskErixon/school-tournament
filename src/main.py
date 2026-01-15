@@ -42,7 +42,7 @@ def test_connection(db: Db) -> None:
 def main():
     print("Connecting to database...")
 
-    cfg = load_config("config.json")
+    cfg = load_config("src/config.json")
     db = Db(cfg)
 
     try:

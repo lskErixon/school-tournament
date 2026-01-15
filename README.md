@@ -203,19 +203,6 @@ school-tournament/
 - Git (optional)
 
 ---
-
-## Python Dependencies
-
-Only one external dependency is used:
-
-mysql-connector-python==9.5.0
-
-Install dependencies using:
-
-```bash
-pip install -r requirements.txt
-```
----
 Rules:
 
 UTF-8 encoding

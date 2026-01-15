@@ -6,11 +6,12 @@ The application is written in **Python (Tkinter)** and uses a **MySQL relational
 This project was created as a **portfolio / school assignment** and fulfills all required criteria, including database design, transactions, data import, and user-friendly UI.
 
 ---
+<br><br/>
+## Installation & Setup
 
-## 1. Installation & Setup
-1.1 Clone the repository (open pycharm atd..).
+### 1. Clone the repository (open pycharm atd..).
 
-1.2 git clone <REPOSITORY_URL>
+1.1 git clone <REPOSITORY_URL>
 
 
 <img width="412" height="345" alt="image" src="https://github.com/user-attachments/assets/b4b3462c-58ea-4b21-9045-112804b84e45" />

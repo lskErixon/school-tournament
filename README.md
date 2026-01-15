@@ -95,15 +95,7 @@ path: school-tournament/src/config.json
 }
 ```
 
-## 5. Install dependencies
-
-Install dependencies using:
-
-```bash
-pip install -r requirements.txt
-```
-
-## 6. Running the Application
+## 5. Running the Application
 
 Go to the root directory of the project
 

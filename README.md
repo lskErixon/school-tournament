@@ -152,6 +152,75 @@ No ORM (SQLAlchemy, Django ORM, etc.) is used.
 
 ---
 
+## High-level Architecture
+
+The application is designed using a layered architecture that separates
+user interface, business logic, data access, and database connection.
+
+```text
+┌───────────────────────────────────────────────────────────┐
+│                    User Interface (Tkinter GUI)            │
+│                                                           │
+│  ui/app.py                                                 │
+│  ui/router.py                                              │
+│  ui/screens/*        (Tournaments, Teams, Players, etc.)   │
+│  ui/dialogs/*        (Create / Edit dialogs)               │
+│  ui/widgets/*        (Sidebar, reusable UI components)     │
+└───────────────────────────────┬───────────────────────────┘
+                                │
+                                │ calls
+                                ▼
+┌───────────────────────────────────────────────────────────┐
+│                Services / Use-cases (Business Logic)       │
+│                                                           │
+│  services/import_service.py                                │
+│  services/transaction logic                                │
+│                                                           │
+│  (CSV import, multi-step operations, transactions)         │
+└───────────────────────────────┬───────────────────────────┘
+                                │
+                                │ calls
+                                ▼
+┌───────────────────────────────────────────────────────────┐
+│            Repositories (DAO / Repository Pattern – D1)    │
+│                                                           │
+│  repositories/*_repository.py                              │
+│  - SQL queries                                             │
+│  - CRUD operations                                         │
+│  - Mapping DB rows → model objects                         │
+└───────────────────────────────┬───────────────────────────┘
+                                │
+                                │ uses
+                                ▼
+┌───────────────────────────────────────────────────────────┐
+│                Database Access Layer                       │
+│                                                           │
+│  - db_mysql.py                                          │
+│  - DbConfig                                                │
+│  - Connection handling                                    │
+│  - Cursor management                                      │
+│  - Error handling                                         │
+└───────────────────────────────┬───────────────────────────┘
+                                │
+                                │ connects
+                                ▼
+┌───────────────────────────────────────────────────────────┐
+│                    MySQL Relational Database               │
+│                                                           │
+│  Tables:                                                   │
+│  - tournament                                              │
+│  - team                                                    │
+│  - player                                                  │
+│  - matches                                                 │
+│  - match_event                                             │
+│  - referee                                                 │
+│  - match_referee (M:N)                                     │
+│                                                           │
+│  Views and constraints                                     │
+└───────────────────────────────────────────────────────────┘
+```
+
+---
 ## Project Structure
 
 ```text

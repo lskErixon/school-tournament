@@ -220,6 +220,10 @@ user interface, business logic, data access, and database connection.
 └───────────────────────────────────────────────────────────┘
 ```
 
+## ERP diagram
+
+<img width="638" height="661" alt="image" src="https://github.com/user-attachments/assets/ecad87f8-2adc-4d0c-9465-eadbda5f5e2f" />
+
 ---
 ## Project Structure
 
